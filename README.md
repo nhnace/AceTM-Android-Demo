@@ -15,7 +15,7 @@ buildscript {
 ```groovy
 dependencies {
     compile 'com.acecounter.android:acetm-release:1.0.0@aar'
-    compile 'com.google.android.gms:play-services-basement:10.0.1’
+    compile 'com.google.android.gms:play-services-basement:10.0.1'
     //play-services는 하위버젼 호환 가능(play-service는 없어도 문제는 없으나 Adid 수집을 위해 필요)
     //... 생략
 }
@@ -42,7 +42,7 @@ public class AceTMApplication extends Application {
 * Application 등록 (AndroidManifest.xml)
 ``` xml
 <application
-    android:name=". AceTMApplication "
+    android:name=".AceTMApplication"
     android:allowBackup="true"
     android:icon="@mipmap/ic_launcher"
     android:label="@string/app_name"
