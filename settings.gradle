@@ -1,1 +1,1 @@
-include ':app', ':AceTM-release'
+include ':app'
