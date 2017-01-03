@@ -27,7 +27,7 @@ dependencies {
 ```
 * AceCounter SID 설정 (AndroidManifest.xml)
 ``` xml
-<meta-data android:name="ACECOUNTER_SID" android:value=”100002" />
+<meta-data android:name="ACECOUNTER_SID" android:value="100002" />
 ```
 * Application Class 재정의 설정 (기존에 사용중인 Application 클래스가 있으면 해당 클래스 수정)
 ```java
@@ -68,7 +68,7 @@ public class AceTMApplication extends Application {
       <data
           android:host="open"
           android:scheme="ACE100078" />
-      <!--[data android:scheme] 값은  “ACE” + SID  구성 입력. (중요: 반드시 대문자로 입력할것)-->
+      <!--[data android:scheme] 값은  "ACE" + SID  구성 입력. (중요: 반드시 대문자로 입력할것)-->
   </intent-filter>
 </activity>
 ```
