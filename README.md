@@ -79,19 +79,13 @@ public class AceTMApplication extends Application {
     package="com.acecounter.android.acetmtest">
 
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
-
+    
     <application
         android:name="com.acecounter.android.acetmtest.AceTMApplication"
-        android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.acecounter.android.acetmtest.activity.MainActivity" />
-
-        <activity android:name=".activity.HybridWebActivity" />
-
-        <activity android:name=".activity.IntroActivity">
+        <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -99,20 +93,16 @@ public class AceTMApplication extends Application {
 
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
-
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-
                 <data
                     android:host="open"
                     android:scheme="ACE100078" />
             </intent-filter>
         </activity>
-
         <meta-data
             android:name="ACECOUNTER_SID"
             android:value="100078" />
-            
     </application>
 </manifest>
 ```
