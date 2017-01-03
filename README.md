@@ -77,7 +77,7 @@ public class AceTMApplication extends Application {
 ``` xml
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.acecounter.android.acetmtest">
-
+    <!--인터넷 사용 권한 필수-->
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
     
     <application
@@ -90,19 +90,21 @@ public class AceTMApplication extends Application {
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
+            <!--CPI,CPA 측정을 위한 DeepLink 설정-->
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
                 <data
                     android:host="open"
-                    android:scheme="ACE100078" />
+                    android:scheme="ACE+SID 입력" />
+                    <!--[data android:scheme] 값은  "ACE" + SID  구성 입력. (중요: 반드시 대문자로 입력할것)-->
             </intent-filter>
         </activity>
+        <!--사이트로 부터 부여받은 SID -->
         <meta-data
-            android:name="ACECOUNTER_SID"
-            android:value="100078" />
-    </application>
+            android:name="ACECOUNTER_SID"
+            android:value="AceCounter SID 입력" />
+    </application>
 </manifest>
 ```
