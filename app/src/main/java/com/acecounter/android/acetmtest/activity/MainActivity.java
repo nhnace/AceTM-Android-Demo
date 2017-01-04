@@ -6,8 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.acecounter.android.acetm.AceTM;
-import com.acecounter.android.acetm.parameter.Parameter;
-import com.acecounter.android.acetm.parameter.Product;
+import com.acecounter.android.acetm.parameter.AceProduct;
 import com.acecounter.android.acetmtest.R;
 
 
@@ -57,7 +56,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 AceTM.pv(this);
                 break;
             case R.id.buttonPu:
-                AceTM.login(this, "mox70501", 25, Parameter.Gender.WOMAN);
+                AceTM.login(this, "mox70501", 25, AceTM.Gender.WOMAN);
                 //AceTM.pu(this);
                 break;
             case R.id.buttonPagErr:
@@ -85,52 +84,52 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 AceTM.codeErr(this, 100, "무언가 오류");
                 break;
             case R.id.buttonNow:
-                Product product1 = new Product("샤프랑 130ml", "10000", 2000., 4);
+                AceProduct product1 = new AceProduct("샤프랑 130ml", "10000", 2000., 4);
                 AceTM.buyNow(this, product1);
                 break;
             case R.id.buttonWish:
-                Product product2 = new Product("샤프랑 130ml", "10000", 2000., 4);
-                product2.addOption(new Product.Option("20000", "하얀색", 2));
-                product2.addOption(new Product.Option("30000", "검은색", 4));
+                AceProduct product2 = new AceProduct("샤프랑 130ml", "10000", 2000., 4);
+                product2.addOption(new AceProduct.AceOption("20000", "하얀색", 2));
+                product2.addOption(new AceProduct.AceOption("30000", "검은색", 4));
                 AceTM.wishList(this, product2);
                 break;
             case R.id.buttonCart:
-                Product product3 = new Product("샤프랑 130ml", "10000", 2000., 4);
-                product3.addOption(new Product.Option("20000", "하얀색", 2));
-                product3.addOption(new Product.Option("30000", "검은색", 4));
+                AceProduct product3 = new AceProduct("샤프랑 130ml", "10000", 2000., 4);
+                product3.addOption(new AceProduct.AceOption("20000", "하얀색", 2));
+                product3.addOption(new AceProduct.AceOption("30000", "검은색", 4));
                 AceTM.addCart(this, product3);
                 break;
             case R.id.buttonBuy:
                 break;
             case R.id.buttonBuyDirect:
-                Product product5 = new Product("샤프랑 130ml", "10000", 2000., 4);
-                product5.addOption(new Product.Option("20000", "하얀색", 2));
-                product5.addOption(new Product.Option("30000", "검은색", 4));
+                AceProduct product5 = new AceProduct("샤프랑 130ml", "10000", 2000., 4);
+                product5.addOption(new AceProduct.AceOption("20000", "하얀색", 2));
+                product5.addOption(new AceProduct.AceOption("30000", "검은색", 4));
                 AceTM.buyList(this, "무통장", Integer.toString((int) (Math.random() * 100000)), 50000.0, product5);
                 break;
             case R.id.buttonBuyCredit:
-                Product product4 = new Product("샤프랑 130ml", "10000", 2000., 4);
-                product4.addOption(new Product.Option("20000", "하얀색", 2));
-                product4.addOption(new Product.Option("30000", "검은색", 4));
+                AceProduct product4 = new AceProduct("샤프랑 130ml", "10000", 2000., 4);
+                product4.addOption(new AceProduct.AceOption("20000", "하얀색", 2));
+                product4.addOption(new AceProduct.AceOption("30000", "검은색", 4));
                 AceTM.buyList(this, "신용카드", Integer.toString((int) (Math.random() * 100000)), 50000.0, product4);
                 break;
             case R.id.buttonBuyEtc:
-                Product product6 = new Product("샤프랑 130ml", "10000", 2000., 4);
-                product6.addOption(new Product.Option("20000", "하얀색", 2));
-                product6.addOption(new Product.Option("30000", "검은색", 4));
+                AceProduct product6 = new AceProduct("샤프랑 130ml", "10000", 2000., 4);
+                product6.addOption(new AceProduct.AceOption("20000", "하얀색", 2));
+                product6.addOption(new AceProduct.AceOption("30000", "검은색", 4));
                 AceTM.buyList(this, "기타", Integer.toString((int) (Math.random() * 100000)), 50000.0, product6);
                 break;
             case R.id.buttonPay:
-                Product product7 = new Product("샤프랑 130ml", "10000", 2000., 4);
-                product7.addOption(new Product.Option("20000", "하얀색", 2));
-                product7.addOption(new Product.Option("30000", "검은색", 4));
+                AceProduct product7 = new AceProduct("샤프랑 130ml", "10000", 2000., 4);
+                product7.addOption(new AceProduct.AceOption("20000", "하얀색", 2));
+                product7.addOption(new AceProduct.AceOption("30000", "검은색", 4));
                 AceTM.pay(this, "카카오톡 페이", product7);
                 break;
             case R.id.buttonReview:
                 AceTM.review(this, Integer.toString((int) (Math.random() * 100000)), "이 상품 별로에요", 5);
                 break;
             case R.id.buttonLogin:
-                AceTM.login(this, "mox7050", 25, Parameter.Gender.MAN);
+                AceTM.login(this, "mox7050", 25, AceTM.Gender.MAN);
                 break;
             case R.id.buttonJoin:
                 AceTM.join(this, "dotoro22", 1000);
