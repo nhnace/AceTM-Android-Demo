@@ -56,11 +56,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 AceTM.pv(this);
                 break;
             case R.id.buttonPu:
-                AceTM.login(this, "mox70501", 25, AceTM.Gender.WOMAN);
-                //AceTM.pu(this);
+                AceTM.pv(this, "testPage");
                 break;
             case R.id.buttonPagErr:
-                AceTM.pageErr(this);
+                AceTM.pageErr(this, "errorPage");
                 break;
             case R.id.buttonHref:
                 AceTM.href(this, "test.php");
@@ -84,17 +83,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 AceTM.codeErr(this, 100, "무언가 오류");
                 break;
             case R.id.buttonNow:
-                AceProduct product1 = new AceProduct("샤프랑 130ml", "10000", 2000., 4);
+                AceProduct product1 = new AceProduct("바로구매 테스트", "10000", 2000., 4);
                 AceTM.buyNow(this, product1);
                 break;
             case R.id.buttonWish:
-                AceProduct product2 = new AceProduct("샤프랑 130ml", "10000", 2000., 4);
+                AceProduct product2 = new AceProduct("위시리스트 테스트", "10000", 2000., 4);
                 product2.addOption(new AceProduct.AceOption("20000", "하얀색", 2));
                 product2.addOption(new AceProduct.AceOption("30000", "검은색", 4));
                 AceTM.wishList(this, product2);
                 break;
             case R.id.buttonCart:
-                AceProduct product3 = new AceProduct("샤프랑 130ml", "10000", 2000., 4);
+                AceProduct product3 = new AceProduct("카트테스트", "10000", 2000., 4);
                 product3.addOption(new AceProduct.AceOption("20000", "하얀색", 2));
                 product3.addOption(new AceProduct.AceOption("30000", "검은색", 4));
                 AceTM.addCart(this, product3);
@@ -102,25 +101,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.buttonBuy:
                 break;
             case R.id.buttonBuyDirect:
-                AceProduct product5 = new AceProduct("샤프랑 130ml", "10000", 2000., 4);
+                AceProduct product5 = new AceProduct("무통장 테스트", "10000", 2000., 4);
                 product5.addOption(new AceProduct.AceOption("20000", "하얀색", 2));
                 product5.addOption(new AceProduct.AceOption("30000", "검은색", 4));
                 AceTM.buyList(this, "무통장", Integer.toString((int) (Math.random() * 100000)), 50000.0, product5);
                 break;
             case R.id.buttonBuyCredit:
-                AceProduct product4 = new AceProduct("샤프랑 130ml", "10000", 2000., 4);
+                AceProduct product4 = new AceProduct("신용카드 테스트", "10000", 2000., 4);
                 product4.addOption(new AceProduct.AceOption("20000", "하얀색", 2));
                 product4.addOption(new AceProduct.AceOption("30000", "검은색", 4));
                 AceTM.buyList(this, "신용카드", Integer.toString((int) (Math.random() * 100000)), 50000.0, product4);
                 break;
             case R.id.buttonBuyEtc:
-                AceProduct product6 = new AceProduct("샤프랑 130ml", "10000", 2000., 4);
+                AceProduct product6 = new AceProduct("기타구매 테스트", "10000", 2000., 4);
                 product6.addOption(new AceProduct.AceOption("20000", "하얀색", 2));
                 product6.addOption(new AceProduct.AceOption("30000", "검은색", 4));
                 AceTM.buyList(this, "기타", Integer.toString((int) (Math.random() * 100000)), 50000.0, product6);
                 break;
             case R.id.buttonPay:
-                AceProduct product7 = new AceProduct("샤프랑 130ml", "10000", 2000., 4);
+                AceProduct product7 = new AceProduct("기타결제 테스트", "10000", 2000., 4);
                 product7.addOption(new AceProduct.AceOption("20000", "하얀색", 2));
                 product7.addOption(new AceProduct.AceOption("30000", "검은색", 4));
                 AceTM.pay(this, "카카오톡 페이", product7);
@@ -138,7 +137,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 AceTM.deactivate(this, "mox70522");
                 break;
             case R.id.buttonDetailView:
-                AceTM.detailView(this, "1242332", "샤프랑 201ml", 10000, "가정용품", "http://test.com/test.jpg");
+                AceTM.detailView(this, "1242332", "제품 상세보기 테스트", 10000, "가정용품", "http://test.com/test.jpg");
                 break;
             case R.id.buttonInnerSearch:
                 AceTM.innerSearch(this, "사프란");
