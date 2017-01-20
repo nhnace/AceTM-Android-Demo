@@ -14,7 +14,7 @@ buildscript {
 * Application build.gradle 설정 
 ```groovy
 dependencies {
-    compile 'com.acecounter.android:acetm-release:1.0.2@aar'
+    compile 'com.acecounter.android:acetm-release:1.0.0@aar'
     compile 'com.google.android.gms:play-services-basement:10.0.1'
     //play-services는 하위버젼 호환 가능(play-service는 없어도 문제는 없으나 Adid 수집을 위해 필요)
     //... 생략
