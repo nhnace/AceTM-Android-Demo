@@ -28,13 +28,13 @@
 
                 <data
                     android:host="open"
-                    android:scheme="ACE100133" />
+                    android:scheme="ACE100004" />
             </intent-filter>
         </activity>
 
         <meta-data
             android:name="ACECOUNTER_SID"
-            android:value="100133" />
+            android:value="100004" />
 
     </application>
 

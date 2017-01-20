@@ -9,6 +9,9 @@ import com.acecounter.android.acetm.AceTM;
 import com.acecounter.android.acetm.parameter.AceProduct;
 import com.acecounter.android.acetmtest.R;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -94,8 +97,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.buttonCart:
                 AceProduct product3 = new AceProduct("카트테스트", "10000", 2000., 4);
-                product3.addOption(new AceProduct.AceOption("20000", "하얀색", 2));
-                product3.addOption(new AceProduct.AceOption("30000", "검은색", 4));
                 AceTM.addCart(this, product3);
                 break;
             case R.id.buttonBuy:
@@ -107,10 +108,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 AceTM.buyList(this, "무통장", Integer.toString((int) (Math.random() * 100000)), 50000.0, product5);
                 break;
             case R.id.buttonBuyCredit:
+                List<AceProduct> products = new ArrayList<>();
                 AceProduct product4 = new AceProduct("신용카드 테스트", "10000", 2000., 4);
                 product4.addOption(new AceProduct.AceOption("20000", "하얀색", 2));
                 product4.addOption(new AceProduct.AceOption("30000", "검은색", 4));
-                AceTM.buyList(this, "신용카드", Integer.toString((int) (Math.random() * 100000)), 50000.0, product4);
+                products.add(product4);
+                product4 = new AceProduct("신용카드 테스트", "10002", 20000., 3);
+                product4.addOption(new AceProduct.AceOption("20000", "XL(100)", 1));
+                product4.addOption(new AceProduct.AceOption("30000", "L(95)", 1));
+
+                AceTM.buyList(this, "신용카드", Integer.toString((int) (Math.random() * 100000)), 50000.0, products);
                 break;
             case R.id.buttonBuyEtc:
                 AceProduct product6 = new AceProduct("기타구매 테스트", "10000", 2000., 4);
