@@ -24,6 +24,7 @@ public class MyApplication extends Application {
             .setServiceId(this, R.string.acecounter_sid)
             .setAutoPageView(true)
             .build();
+        AceTM.initialize(aceConfiguration);
     }
 }
 ```
