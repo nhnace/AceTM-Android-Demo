@@ -1,6 +1,6 @@
 # AceCounter+ Android SDK
 AceCounter+ 분석 서비스를 사용하기 위한 Android SDK 입니다.
-* [상세 가이드 바로가기]()
+* [가이드 바로가기](https://github.com/shinsung/AceTM-Android-Demo/wiki)
 
 # 간편 시작하기
 AceCounter+를 가장 쉽게 이용하는 방법입니다.  
@@ -18,13 +18,13 @@ AndroidManifest.xml 에 `Application class` 추가 하기 :
 Application 클래스에서 `초기화`하기 :
 ```java
 public class MyApplication extends Application {
-  @Override 
-  public void onCreate() {
-    AceConfiguration aceConfiguration = new AceConfiguration(this);
-    aceConfiguration.setServiceId(R.string.acecounter_sid);
-    aceConfiguration.setAutoPageView(true);
-    AceTM.initialize(aceConfiguration);
-  }
+    @Override 
+    public void onCreate() {
+        AceConfiguration aceConfiguration = new AceConfiguration.Builder(this)
+            .setServiceId(this, R.string.acecounter_sid)
+            .setAutoPageView(true)
+            .build();
+    }
 }
 ```
 고객 아이디 보호를 위해 **ServiceId**는 `res/string`을 사용하실 것을 권장 해드립니다.
@@ -33,3 +33,4 @@ public class MyApplication extends Application {
 * [데이터 수집이 정상적으로 이루어지는지 확인하고 싶습니다.]()
 * [데이터 수집이 안됩니다.]()
 * [예전 버전(1.0.7 이하)을 사용하고 있습니다. 계속 사용해도 될까요??]()
+* [AceCounter+ Web 분석 Script는 어떻게 설치하나요?]()
