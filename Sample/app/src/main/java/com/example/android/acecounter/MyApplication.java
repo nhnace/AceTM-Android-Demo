@@ -9,14 +9,14 @@ public class MyApplication extends Application{
     @Override
     public void onCreate() {
         super.onCreate();
-        AceConfiguration aceConfiguration = new AceConfiguration(this);
+        AceConfiguration aceConfiguration = new AceConfiguration.Builder(this)
+                //TODO : [필수] 보안을 위해 Resource ID를 사용하실 것을 권장해드립니다.
+                .setServiceId(this, R.string.acecouneter_sid)
+                //TODO : [선택] PageView 자동 수집을 원하실 경우 setAutoPageView 를 true 로 설정 해주세요.
+                //TODO : [주의] Activity 의 WebView 에 AceCounter+ WebScript 가 적용 된 경우 정확한 수집을 위하여 ignore 항목으로 등록 해주세요.
+                .setAutoPageView(true, HybridActivity.class)
+                .build();
 
-        //TODO : [필수] 보안을 위해 Resource ID를 사용하실 것을 권장해드립니다.
-        aceConfiguration.setServiceId(R.string.acecouneter_sid);
-
-        //TODO : [선택] PageView 자동 수집을 원하실 경우 setAutoPageView 를 true 로 설정 해주세요.
-        //TODO : [주의] Activity 의 WebView 에 Acecounter+ WebScript 가 적용 된 경우 정확한 수집을 위하여 ignore 항목으로 등록 해주세요.
-        aceConfiguration.setAutoPageView(true, HybridActivity.class);
         AceTM.initialize(aceConfiguration);
 
         /**
