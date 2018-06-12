@@ -6,10 +6,8 @@ AceCounter+ 분석 서비스를 사용하기 위한 Android SDK 입니다.
 # 간편 시작하기
 AceCounter+를 가장 쉽게 이용하는 방법입니다.  
 
-`AceTM-1.0.8.aar` 모듈 추가하기 :
-```
-/lib/AceTM-1.0.8.aar
-```
+Project에 `AceTM-1.0.8.aar` 모듈 추가하기 :  
+* 다운로드 : [AceTM-1.0.8.aar](./Lib/AceTM-1.0.8.aar)
 
 AndroidManifest.xml 에 `Application class` 추가 하기 :
 ```java
