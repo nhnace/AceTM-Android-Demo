@@ -1,7 +1,7 @@
 # AceCounter+ Android SDK
 AceCounter+ 분석 서비스를 사용하기 위한 Android SDK 입니다.
 * [AceCounter+ 서비스 페이지 바로가기](https://new.acecounter.com/common/front) 
-* [설치 가이드 바로가기](https://github.com/shinsung/AceTM-Android-Demo/wiki)
+* [설치 가이드 바로가기](https://github.com/nhndnt/AceTM-Android-Demo/wiki)
 
 # 간편 시작하기
 AceCounter+를 가장 쉽게 이용하는 방법입니다.  
